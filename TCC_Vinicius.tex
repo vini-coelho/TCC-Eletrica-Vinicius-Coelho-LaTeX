@@ -1,0 +1,322 @@
+\documentclass[12pt, a4paper]{article}
+% pacotes utilizados
+%\usepackage{abnt-UFPR}
+\usepackage[pdftex]{graphicx}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{setspace}
+\onehalfspace
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{color}
+\usepackage[normalem]{ulem}
+\usepackage{lmodern}
+\usepackage{pdfpages}
+
+\usepackage{listings}
+
+\definecolor{verdao}{rgb}{0.0, 0.5, 0.0}
+
+\lstset{
+	language=Python,
+	frame=single,
+	numbers=left,
+	showspaces=false,
+	showstringspaces=false,
+	basicstyle=\ttfamily,
+	captionpos=t,
+	basicstyle=\small,
+	keywordstyle=\ttfamily \color{blue},
+	keywordstyle=[2]\ttfamily \color{blue},
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{verdao}\ttfamily
+}
+
+%\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage[alf]{abntex2cite}
+%\pagestyle{headings}
+%configuracoes do sumario
+\usepackage{tocloft}
+\renewcommand{\cftdot}{\textbf{.}}
+\renewcommand{\cftsecdotsep}{\cftdotsep}
+\renewcommand{\cftsecdotsep}{4}
+\renewcommand{\cftsubsecdotsep}{4}
+\renewcommand{\cftsecfont}{\normalsize\bfseries}
+\renewcommand{\cftsubsecfont}{\normalsize}
+\renewcommand{\cftsecpagefont}{\textbf}
+\renewcommand{\cftsubsecpagefont}{\textbf}
+\cftsetindents{section}{0cm}{1.3cm}
+\cftsetindents{subsection}{0cm}{1.3cm}
+\cftsetindents{subsubsection}{0cm}{1.3cm}
+%\renewcommand{\figurename}{Fig.}
+\newcommand{\bigsize}{\fontsize{12pt}{20pt}\selectfont}
+
+\usepackage[labelsep=endash]{caption}
+\setlength{\cftsubsecindent}{0em}
+\tocloftpagestyle{empty}
+\newcommand{\bfemph}[1]{\textbf{\textit{#1}}}
+\renewcommand{\emph}[1]{\bfemph{#1}}
+%Formatacao de Padroes das Referencias Bibliograficas
+%\usepackage{custom-bib}
+
+%Formatacao de Titulos, Secoes, Subtitulos, etc...
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\section}{\normalfont\normalsize\filright\bfseries}{\thesection}{1em}{\uppercase}
+%\renewcommand{\thesubsection}{\alph{subsection}}
+\titleformat{\subsection}{\normalfont\normalsize\filright\bfseries}{\thesubsection}{1em}{}
+%\renewcommand{\thesubsubsection}{\roman{subsubsection}}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+%
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+%Espacamento de Paragrafos
+\setlength{\parindent}{0.8cm}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+%1ex plus 0.5ex minus 0.2ex
+\pagestyle{myheadings}
+
+\pagenumbering{arabic}
+
+\author{ \bf UNIVERSIDADE DO ESTADO DO AMAZONAS - UEA \\[14pt] \small ESCOLA SUPERIOR DE TECNOLOGIA - EST \\[14pt] ENGENHARIA ELÉTRICA \\[96pt] VINICIUS TAVARES COELHO \\[96pt]}
+\title{ \rm \bf \Large ANÁLISE DE VIABILIDADE ECONÔMICA E AMBIENTAL DA UTILIZAÇÃO DOS GRUPOS GERADORES DO TRIBUNAL DE CONTAS DO ESTADO DO AMAZONAS ALIMENTADOS POR BIODIESEL PARA GERAÇÃIO DE ENERGIA NA PONTA\\[123pt] \rm \small Manaus \\  2022}
+
+
+\newcommand{\thesisTitle}{ANÁLISE DE VIABILIDADE ECONÔMICA E AMBIENTAL DA UTILIZAÇÃO DOS GRUPOS GERADORES DO TRIBUNAL DE CONTAS DO ESTADO DO AMAZONAS ALIMENTADOS POR BIODIESEL PARA GERAÇÃO DE ENERGIA NA PONTA}
+\newcommand{\thesisAuthor}{VINICIUS TAVARES COELHO}
+
+\pagestyle{myheadings}
+
+% Start the document
+\begin{document}
+
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+%INÍCIO DA CAPA DA MONOGRAFIA
+\thispagestyle{empty}
+\begin{center}
+\textbf{ UNIVERSIDADE DO ESTADO DO AMAZONAS \\
+ESCOLA SUPERIOR DE TECNOLOGIA \\[50pt] }
+\textbf{ \\[70pt] {\bigsize VINICIUS TAVARES COELHO} \\[120pt] }
+\textbf{ {\bigsize \thesisTitle}  \\[104pt] }
+\end{center}
+% COMENTÁRIOS DA FOLHA DE ROSTO
+\hspace*{8cm}
+
+\vspace*{\fill}
+
+\begin{center}
+Manaus \\ 2022
+\end{center}
+
+%FIM DA CAPA DA MONOGRAFIA
+
+%INÍCIO DA FOLHA DE ROSTO
+\newpage
+\thispagestyle{empty}
+\begin{center}
+
+
+% \textbf{ \\[70pt] {\bigsize CARLA PATRICIA MICHILES ARAUJO} \\[120pt] }
+\textbf{ {\bigsize \thesisAuthor} \\[120pt] }
+\textbf{ {\bigsize \thesisTitle}  \\[50pt] }
+\end{center}
+% COMENTÁRIOS DA FOLHA DE ROSTO
+\hspace*{8cm}
+\begin{flushright}
+\begin{minipage}{8cm}
+\begin{singlespace}
+Projeto de pesquisa desenvolvido durante a disciplina de Trabalho de Conclusão de Curso II e apresentada à banca avaliadora do Curso de Engenharia Elétrica da Escola Superior de Tecnologia da Universidade do Estado do Amazonas, como pré-requisito para obtenção do título de Engenheiro Eletricista.\\[50pt]
+\end{singlespace}
+\end{minipage}
+\end{flushright}
+\begin{center}
+Orientador: Raimundo Cláudio Souza Gomes, Me.
+
+\end{center}
+
+\vspace*{\fill}
+\begin{center}
+Manaus \\ 2022
+\end{center}
+
+
+
+%FIM DA FOLHA DE ROSTO
+
+%INICIO DA PAG CATALOGAÇÃO
+
+\newpage
+\thispagestyle{empty}
+
+\includepdf[pages=-]{carlaze.pdf}
+
+\newpage
+\thispagestyle{empty}
+\begin{center}
+
+
+% \textbf{ \\[30pt] {\bigsize CARLA PATRICIA MICHILES ARAUJO} \\[50pt] }
+\textbf{ {\bigsize \thesisAuthor} \\[50pt] }
+\textbf{ {\bigsize \thesisTitle}  \\[50pt] }
+\end{center}
+% COMENTÁRIOS DA FOLHA DE ROSTO
+\hspace*{8cm}
+\begin{flushright}
+\begin{minipage}{8cm}
+\begin{singlespace}
+Pesquisa desenvolvida durante a disciplina de Trabalho de Conclusão de Curso II e apresentada à banca avaliadora do Curso de Engenharia Elétrica da Escola Superior de Tecnologia da Universidade do Estado do Amazonas, como pré-requisito para obtenção do título de Engenharia Eletricista.\\[30pt]
+\end{singlespace}
+\end{minipage}
+\end{flushright}
+\begin{center}
+Nota obtida:\uline{\hspace{1cm}}(\uline{\hspace{8cm}})
+\vspace{1.0cm}
+\begin{center}
+Aprovado em 20/05/2022
+\end{center}
+Área de concentração: Engenharia Elétrica
+\end{center}
+\vspace{1.2cm}
+\begin{center}
+BANCA EXAMINADORA
+\end{center}
+\vspace{1.0cm}
+
+%\begin{flushright}
+\begin{minipage}[l]{14cm}
+\begin{center}
+\hspace{1cm}\uline{\hspace{10.5cm}} \\
+\hspace{1cm}Orientador: Raimundo Cláudio Souza Gomes, Me.
+
+\hspace{1cm}\uline{\hspace{10.5cm}} \\
+\hspace{1cm}Avaliador: Israel Gondres Torné, Dr.
+
+\hspace{1cm}\uline{\hspace{10.5cm}} \\
+\hspace{1cm}Avaliador: Fábio de Sousa Cardoso, Dr.
+
+\end{center}
+\end{minipage}
+
+%\end{flushright}
+\hspace*{8cm}
+
+\vspace*{\fill}
+\begin{center}
+Manaus\\2017
+\end{center}
+
+
+
+\newpage
+\thispagestyle{empty}
+\begin{flushright}
+\begin{minipage}{8cm}
+\begin{singlespace}
+{\begin{center}\vspace{18cm}\textbf{\normalsize Dedicatória}\vspace{36pt}\end{center}}
+Dedico este trabalho ao meu avô José Rodrigues (in memorian), que me ensinou o valor do trabalho.\\[50pt]
+\end{singlespace}
+\end{minipage}
+\end{flushright}
+\newpage
+\thispagestyle{empty}
+\vspace*{4.5cm}
+{\begin{center}\textbf{\normalsize AGRADECIMENTO}\vspace{36pt}\end{center}}
+\hspace*{0.8cm}À Deus, que tornou possível, mesmo com muitos sacrifícios me deu fé para finalização deste trabalho.
+
+\hspace*{0.8cm} Agradeço á minha família, que sempre proporcionaram condições adequadas para crescer na vida pessoal e profissional e ao meu noivo, amigo e compaheiro de todas as horas, Kenny Vinente, pelo carinho, paciência, compreensão e amor.
+
+\hspace*{0.8cm} Agradeço ao meu orientador, Wheidima Carneiro de Melo, por fornecer todo o apoio que eu precisava para a realização deste trabalho.
+
+
+\hspace*{0.8cm}Aos engenheiros, Thales Araujo, Ronald Santos e Adriano Ibrahim, pelo tempo dedicado na empresa Philips, que contribuiram com material e suporte no entendimento teórico do sinal do eletrocardiograma.
+
+
+\hspace*{0.8cm}Aos alunos de graduação, Giovanni Antonnacio e Marcus Vinícius pelo suporte no desenvolvimento do projeto e aos Notáveis que estiveram ao meu lado me incentivando durante todo o processo.
+
+
+
+
+\newpage
+
+\thispagestyle{empty}
+\vspace*{4cm}
+{\begin{center}\textbf{\normalsize RESUMO}\vspace{36pt}\end{center}}
+O presente trabalho tem como objetivo desenvolver um protótipo de eletrocardiógrafo portátil de baixo custo que realize a aquisição e transmissão dos sinais ECG em tempo real. Sua apresentação está dividida em quatro capítulos. O primeiro capítulo, Referencial Teórico, apresenta assuntos referente a composição do eletrocardiograma, necessárias para o desenvolvimento deste trabalho, o coração, o ciclo cardíaco, o eletrocardiograma, derivações eletrocardiográficas, o triângulo de einthoven, eletrodos e interferência em sinais de ECG. O segundo capítulo, Metodologia, apresenta os materias e métodos necessário para aquisição e transmissão dos sinais de ECG. O terceiro capítulo, Implementação do Projeto, descreve o uso dos componentes, assim como o desenvolvimento do hardware utilizando a placa de aquisição e o Rapsberry Pi 3, além de descrever o uso dos protocolos utilizados, o funcionamento da arquitetura cliente-servidor para transmissão de dados utilizando a rede Wi-Fi como meio de comunicação. O quarto capítulo apresenta os resultados obtidos durante o desenvolvimento do projeto. Apesar do estudo ter um caráter de implementação do circuito de aquisição ECG, os resultados obtidos apresentaram ruídos nas formas de ondas, que poderiam ser diminuídos se algoritmos específicos com certo grau de complexidade fossem utilizados para realizar a separação do sinal e ruído. Nas conclusões são apresentadas as dificuldades enfrentadas na realização deste projeto, os objetivos que foram alcançados e aplicações para o protótipo desenvolvido.
+
+
+\textbf{Palavras chave}: eletrocardiograma. protótipo de baixo custo, Raspberry Pi 3
+
+\newpage
+\thispagestyle{empty}
+\vspace*{4.4cm}
+{\begin{center}\textbf{\normalsize ABSTRACT}\vspace{36pt}\end{center}}
+The present work aims to develop a prototype of a low cost portable electrocardiograph that performs the acquisition and transmission of ECG signals in real time. Its presentation is divided into four chapters. The first chapter, Theoretical Framework, presents subjects related to the composition of the electrocardiogram necessary for the development of this work, the heart, the cardiac cycle, the electrocardiogram, electrocardiographic leads, the eithoven’s triangle, electrodes and interference on ECG signals. The second chapter, Methodology, presents the materials and methods necessary for the acquisition and transmission of ECG signals. The third chapter, Project Implementation, describes the use of the components, as well as hardware development using the acquisition board and a Rapsberry Pi 3. In addition, it is described the protocols used and the operation of the client-server architecture for data transmission using the wireless network to communicate them. The fourth chapter presents the results obtained during the development of the project. Although the study focused on the implementation of an ECG acquisition circuit, the results obtained presented noises in the waveforms, which could be reduced if specific algorithms with a certain degree of complexity were used to perform signal and noise separation. Finally, the conclusion presents the challenges faced in the accomplishment of this project, the objectives achieved and applications for the developed prototype.
+
+
+\textbf{Keywords}: electrocardiogram, low cost prototype, Rapsberry Pi 3
+
+
+%INÍCIO DA LISTA DE FIGURAS
+
+\newpage
+\pagestyle{empty}
+%\vspace*{4cm}
+\listoffigures
+\clearpage
+
+%FIM DA LISTA DE FIGURAS
+
+
+
+%INÍCIO DO SUMÁRIO
+\newpage
+\pagestyle{empty}
+%\vspace*{3.5cm}
+\renewcommand{\contentsname}{\begin{center}\textbf{\normalsize SUMÁRIO}\vspace{36pt}\end{center}}
+\tableofcontents
+\clearpage
+%FIM DO SUMÁRIO
+
+\pagestyle{myheadings}
+
+\include{chapters/0-introduction}
+\include{chapters/1-referential}
+\include{chapters/2-part1}
+\include{chapters/3-part2}
+\include{chapters/4-results}
+
+\newpage
+\section{ANÁLISE ECONÔMICA E AMBIENTAL}
+
+
+\newpage
+
+
+% Uncomment the following two lines if you want to have a bibliography. Please do not forget to add an entry to your bibliography and reference it by using the \cite{} command
+%\bibliographystyle{alphadin}
+\providecommand*{\refname}{}
+\renewcommand*{\refname}{\begin{center}\textbf{REFERÊNCIAS}\end{center}}
+
+\newpage
+\vspace*{4cm}
+%\providecommand{\bibname}{}
+%\renewcommand{\bibname}{\begin{center}\textbf{REFERÊNCIAS}\vspace{48pt}\end{center}}
+
+\pagestyle{empty}
+\pagestyle{myheadings}
+
+%\bibliographystyle{alpha}
+
+\addcontentsline{toc}{section}{REFER\^ENCIAS}
+\bibliography{bibliografia}
+
+% End of the document
+\end{document}
